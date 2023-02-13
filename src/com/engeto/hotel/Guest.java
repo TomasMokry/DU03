@@ -15,8 +15,7 @@ public class Guest {
     }
 
     public String description(){
-        String guestDesc = this.firstName + " " + this.surName +" "+ this.birthday;
-        return guestDesc;
+        return this.firstName + " " + this.surName +" "+ this.birthday;
     }
     public String getFirstName(){
         return firstName;

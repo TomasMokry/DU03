@@ -18,11 +18,11 @@ public class Main {
         Room room02 = new Room(2,1,true,true,BigDecimal.valueOf(1000.0));
         Room room03 = new Room(3,3,false,true,BigDecimal.valueOf(2400.0));
 
-        System.out.println("Guests:");
+        System.out.println("Guests:\n"+separator);
         System.out.println("Guest 01: " +guest01.description()+"\n"+separator);
         System.out.println("Guest 02: " +guest02.description()+"\n"+separator);
 
-        System.out.println("Rooms:");
+        System.out.println("\nRooms:\n"+separator);
         System.out.println("Room 01:\n" +room01.description()+"\n"+separator);
         System.out.println("Room 02:\n" +room02.description()+"\n"+separator);
         System.out.println("Room 03:\n" +room03.description()+"\n"+separator);
@@ -42,13 +42,10 @@ public class Main {
         allBookingList.addBooking(booking01);
         allBookingList.addBooking(booking02);
 
-        System.out.println("Reservations:");
+        System.out.println("Reservations:\n"+separator);
         for (Booking item : allBookingList.getListOfBookings()){
             System.out.println(item.description());
             System.out.println(separator);
         }
-
-
-
     }
 }

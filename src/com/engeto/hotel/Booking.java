@@ -21,10 +21,9 @@ public class Booking {
     }
 
     public String description(){
-        String bookingDesc = "Main guest: "+this.guest.getSurName()+"\nRoom Number: "+this.room.getIdRoom()+"\n"
-                +"Other guests: "+this.otherGuests.size()+"\nStart date: "+this.startDate+"\n"
-                +"End Date: "+this.endDate+"\nType of vacation: "+this.typeOfVacation;
-        return bookingDesc;
+        return "Main guest: "+ this.guest.getSurName()+"\nRoom Number: "+ this.room.getIdRoom()+"\n"
+                +"Other guests: "+ this.otherGuests.size()+"\nStart date: "+ this.startDate+"\n"
+                +"End Date: "+ this.endDate+"\nType of vacation: "+ this.typeOfVacation;
     }
     public Guest getGuest() {
         return guest;

@@ -14,7 +14,7 @@ public class ListOfBookings {
         allBookings.remove(booking);
     }
     public List<Booking> getListOfBookings(){
-        return new ArrayList<Booking>(allBookings);
+        return new ArrayList<>(allBookings);
     }
     public List<Booking> getAllBookings() {
         return allBookings;

@@ -1,2 +1,45 @@
-package com.engeto.hotel;public class guest {
+package com.engeto.hotel;
+
+import java.time.LocalDate;
+
+public class Guest {
+    private String firstName;
+    private String surName;
+    private LocalDate birthday;
+
+
+    public Guest(String firstName, String surName, LocalDate birthday){
+        this.firstName = firstName;
+        this.surName = surName;
+        this.birthday = birthday;
+    }
+
+    public String description(){
+        String guestDesc = this.firstName + " " + this.surName +" "+ this.birthday;
+        return guestDesc;
+    }
+    public String getFirstName(){
+        return firstName;
+    }
+
+    public void setFirstName(String firstName){
+        this.firstName = firstName;
+    }
+
+    public String getSurName() {
+        return surName;
+    }
+
+    public void setSurName(String surName) {
+        this.surName = surName;
+    }
+
+    public LocalDate getBirthday() {
+        return birthday;
+    }
+
+    public void setBirthday(LocalDate birthday) {
+        this.birthday = birthday;
+    }
 }
+

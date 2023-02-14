@@ -16,9 +16,7 @@ public class ListOfBookings {
     public List<Booking> getListOfBookings(){
         return new ArrayList<>(allBookings);
     }
-    public List<Booking> getAllBookings() {
-        return allBookings;
-    }
+   
 
     public void setAllBookings(List<Booking> allBookings) {
         this.allBookings = allBookings;

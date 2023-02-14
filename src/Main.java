@@ -54,15 +54,10 @@ public class Main {
         allBookingList.addBooking(booking02);
 
         System.out.println("Reservations:\n"+separator);
-        for (Booking item : allBookingList.getListOfBookings()){
-            System.out.println("Main guest: "+item.getGuest().getSurName());
-            System.out.println("Room number: "+item.getRoom().getIdRoom());
-            System.out.println("Other guests: "+item.getOtherGuests().size());
-            System.out.println("Dates: "+item.getStartDate()+" - "+item.getEndDate());
-            System.out.println("Type of vacation: "+item.getTypeOfVacation());
-            System.out.println(separator);
-        }
+        System.out.println("Number of reservations: "+allBookingList.numOfBookings());
+        System.out.println(separator);
+        allBookingList.printAllBookings();
+        System.out.println(separator);
         ///endregion
     }
-
 }

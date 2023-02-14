@@ -42,11 +42,11 @@ public class Main {
                 new ArrayList<>(),LocalDate.of(2021,7,19),
                 LocalDate.of(2021,7,26),"work");
 
-        List<Guest> otherGuests = new ArrayList<>();
-        otherGuests.add(guest02);
+        List<Guest> otherGuestsBooking2 = new ArrayList<>();
+        otherGuestsBooking2.add(guest02);
 
         Booking booking02 = new Booking(guest01,room03,
-                otherGuests,LocalDate.of(2021,9,1),
+                otherGuestsBooking2,LocalDate.of(2021,9,1),
                 LocalDate.of(2021,9,14),"work");
 
         ListOfBookings allBookingList = new ListOfBookings();

@@ -17,11 +17,6 @@ public class Room {
         this.price = price;
     }
 
-    public String description(){
-        return "ID: "+ this.idRoom+"\nBed Number: "+ this.bedNumber+"\n"
-                +"Has Balcony: "+ this.hasBalcony+"\nHas Sea view: "+ this.hasSeaView+"\n"
-                +"Price: "+ this.price+" Kc/night";
-    }
     public int getIdRoom(){
        return idRoom;
     }

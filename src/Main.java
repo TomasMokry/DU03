@@ -9,6 +9,7 @@ import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
+
         String separator = "=".repeat(50);
 
         Guest guest01 = new Guest("Adéla", "Malíková", LocalDate.of(1993,3,13));
@@ -18,15 +19,25 @@ public class Main {
         Room room02 = new Room(2,1,true,true,BigDecimal.valueOf(1000.0));
         Room room03 = new Room(3,3,false,true,BigDecimal.valueOf(2400.0));
 
+        ///region Guests:
         System.out.println("Guests:\n"+separator);
         System.out.println("Guest 01: " +guest01.description()+"\n"+separator);
         System.out.println("Guest 02: " +guest02.description()+"\n"+separator);
+        ///endregion
 
+        ///region Rooms:
         System.out.println("\nRooms:\n"+separator);
-        System.out.println("Room 01:\n" +room01.description()+"\n"+separator);
-        System.out.println("Room 02:\n" +room02.description()+"\n"+separator);
-        System.out.println("Room 03:\n" +room03.description()+"\n"+separator);
+        System.out.println("Room ID: "+room01.getIdRoom()+"\nBeds: "+room01.getBedNumber()+"\nHas Balcony: "
+                +room01.isHasBalcony()+"\nHas Sea View: "+room01.isHasSeaView()+"\nPrice: "+room01.getPrice());
+        System.out.println(separator);
+        System.out.println("Room ID: "+room02.getIdRoom()+"\nBeds: "+room02.getBedNumber()+"\nHas Balcony: "
+                +room02.isHasBalcony()+"\nHas Sea View: "+room02.isHasSeaView()+"\nPrice: "+room02.getPrice());
+        System.out.println(separator);
+        System.out.println("Room ID: "+room03.getIdRoom()+"\nBeds: "+room03.getBedNumber()+"\nHas Balcony: "
+                +room03.isHasBalcony()+"\nHas Sea View: "+room03.isHasSeaView()+"\nPrice: "+room03.getPrice());
+        ///endregion:
 
+        ///region Booking:
         Booking booking01 = new Booking(guest01,room01,
                 new ArrayList<>(),LocalDate.of(2021,7,19),
                 LocalDate.of(2021,7,26),"work");
@@ -44,8 +55,14 @@ public class Main {
 
         System.out.println("Reservations:\n"+separator);
         for (Booking item : allBookingList.getListOfBookings()){
-            System.out.println(item.description());
+            System.out.println("Main guest: "+item.getGuest().getSurName());
+            System.out.println("Room number: "+item.getRoom().getIdRoom());
+            System.out.println("Other guests: "+item.getOtherGuests().size());
+            System.out.println("Dates: "+item.getStartDate()+" - "+item.getEndDate());
+            System.out.println("Type of vacation: "+item.getTypeOfVacation());
             System.out.println(separator);
         }
+        ///endregion
     }
+
 }

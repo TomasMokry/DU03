@@ -9,9 +9,9 @@ public class Booking {
     private List<Guest> otherGuests;
     private LocalDate startDate;
     private LocalDate endDate;
-    private String typeOfVacation;
+    private TypeOfVacation typeOfVacation;
 
-    public Booking(Guest guest, Room room, List<Guest> otherGuests, LocalDate startDate, LocalDate endDate, String typeOfVacation) {
+    public Booking(Guest guest, Room room, List<Guest> otherGuests, LocalDate startDate, LocalDate endDate, TypeOfVacation typeOfVacation) {
         this.guest = guest;
         this.room = room;
         this.otherGuests = otherGuests;
@@ -60,11 +60,11 @@ public class Booking {
         this.endDate = endDate;
     }
 
-    public String getTypeOfVacation() {
+    public TypeOfVacation getTypeOfVacation() {
         return typeOfVacation;
     }
 
-    public void setTypeOfVacation(String typeOfVacation) {
+    public void setTypeOfVacation(TypeOfVacation typeOfVacation) {
         this.typeOfVacation = typeOfVacation;
     }
 }

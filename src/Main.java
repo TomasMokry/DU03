@@ -1,7 +1,5 @@
-import com.engeto.hotel.Guest;
-import com.engeto.hotel.ListOfBookings;
-import com.engeto.hotel.Room;
-import com.engeto.hotel.Booking;
+import com.engeto.hotel.*;
+
 import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.util.ArrayList;
@@ -40,14 +38,14 @@ public class Main {
         ///region Booking:
         Booking booking01 = new Booking(guest01,room01,
                 new ArrayList<>(),LocalDate.of(2021,7,19),
-                LocalDate.of(2021,7,26),"work");
+                LocalDate.of(2021,7,26), TypeOfVacation.WORK);
 
         List<Guest> otherGuestsBooking2 = new ArrayList<>();
         otherGuestsBooking2.add(guest02);
 
         Booking booking02 = new Booking(guest01,room03,
                 otherGuestsBooking2,LocalDate.of(2021,9,1),
-                LocalDate.of(2021,9,14),"work");
+                LocalDate.of(2021,9,14),TypeOfVacation.RECREATION);
 
         ListOfBookings allBookingList = new ListOfBookings();
         allBookingList.addBooking(booking01);
